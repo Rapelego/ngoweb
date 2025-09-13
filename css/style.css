@@ -107,9 +107,9 @@ nav ul li a.active {
 /* Hero Header with background logo */
 .hero-header {
   text-align: center;
-  padding: 100px 20px;
-  background: url("../img/logo_BF") no-repeat center center; /* logo file */
-  background-size: 200px; /* resize logo */
+  padding: 120px 20px;
+  background: url("../img/logo_BF.png") no-repeat center center; /* logo file */
+  background-size: 100%; /* cover the entire section */
   background-color: #e6f2ff; /* fallback color */
   position: relative;
 }
@@ -124,9 +124,8 @@ nav ul li a.active {
 }
 /* Logo in nav */
 nav .logo {
-  height: 60px;
+  height: 40px;
   width: auto;
   margin-right: 20px;
   vertical-align: middle;
 }
-
