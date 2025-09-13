@@ -104,3 +104,22 @@ nav ul li a.active {
   background: #ffcc00;
   color: #004080;
 }
+/* Hero Header with background logo */
+.hero-header {
+  text-align: center;
+  padding: 100px 20px;
+  background: url("img/logo_BF") no-repeat center center; /* logo file */
+  background-size: 120px; /* resize logo */
+  background-color: #e6f2ff; /* fallback color */
+  position: relative;
+}
+
+.hero-header h1 {
+  font-size: 2.5em;
+  color: #004080;
+  background: rgba(255, 255, 255, 0.7); /* semi-transparent overlay to improve readability */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
