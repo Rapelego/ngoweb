@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Contact|Bright Futures AfterCare</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <title>Contact|Bright Futures AfterCare</title>
-   <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <!--Navigation-->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="programmes.html">Programmes</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
 
-<body>
-<!--Navigation-->
- <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="programmes.html">Programmes</a></li>
-    <li><a href="volunteer.html">Volunteer</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-</nav>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <!-- Main Content -->
+    <main>
+      <section id="contact">
+        <p>
+          Have questions, want to volunteer, or would like to enrol your child?
+          We’d love to hear from you!
+        </p>
 
+        <h2>Contact Details</h2>
+        <p><strong>Email:</strong> info@brightfutures.org</p>
+        <p><strong>Phone:</strong> +27 11 123 4567</p>
+        <p>
+          <strong>Address:</strong> 123 Sunshine Street, Johannesburg, South
+          Africa
+        </p>
 
-  <header>
+        <h2>Send Us a Message</h2>
+        <form
+          action="mailto:info@brightfutures.org"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Your Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
 
-    <h1>Contact Us</h1>
+          <label for="email">Your Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
 
-  </header>
-<!-- Main Content -->
-  <main>
-    <section id="contact">
-      <p>
-        Have questions, want to volunteer, or would like to enrol your child? We’d love to hear from you!
-      </p>
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea
+          ><br /><br />
 
-      <h2>Contact Details</h2>
-      <p><strong>Email:</strong> info@brightfutures.org</p>
-      <p><strong>Phone:</strong> +27 11 123 4567</p>
-      <p><strong>Address:</strong> 123 Sunshine Street, Johannesburg, South Africa</p>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
 
-      <h2>Send Us a Message</h2>
-      <form action="mailto:info@brightfutures.org" method="post" enctype="text/plain">
-        <label for="name">Your Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-
-        <label for="email">Your Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Bright Futures Aftercare | Website by Maditsi Rapelego</p>
-  </footer>
-
-</body>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Bright Futures Aftercare | Website by Maditsi Rapelego</p>
+    </footer>
+  </body>
 </html>

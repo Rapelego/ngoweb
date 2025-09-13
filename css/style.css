@@ -96,7 +96,7 @@ nav ul li a {
 /* Hover effect */
 nav ul li a:hover {
   background: #ffcc00; /* Bright yellow */
-  color: #004080;      /* Dark blue text */
+  color: #004080; /* Dark blue text */
 }
 
 /* Active page link */
@@ -104,4 +104,3 @@ nav ul li a.active {
   background: #ffcc00;
   color: #004080;
 }
-
