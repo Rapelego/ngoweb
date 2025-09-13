@@ -108,7 +108,7 @@ nav ul li a.active {
 .hero-header {
   text-align: center;
   padding: 100px 20px;
-  background: url("img/logo_BF") no-repeat center center; /* logo file */
+  background: url("..img/logo_BF") no-repeat center center; /* logo file */
   background-size: 120px; /* resize logo */
   background-color: #e6f2ff; /* fallback color */
   position: relative;
@@ -121,5 +121,12 @@ nav ul li a.active {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 8px;
+}
+/* Logo in nav */
+nav .logo {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+  vertical-align: middle;
 }
 
