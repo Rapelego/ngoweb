@@ -13,33 +13,6 @@ body {
   color: #333;
 }
 
-/* Navigation bar */
-nav {
-  background: #0066cc;
-  padding: 10px 0;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  text-decoration: underline;
-}
-
 /* Header */
 header {
   text-align: center;
@@ -87,3 +60,48 @@ footer {
   color: white;
   margin-top: 20px;
 }
+
+/* ===== Navigation Bar ===== */
+nav {
+  background: #004080; /* Dark blue background */
+  padding: 15px 0;
+  position: sticky; /* stays at top while scrolling */
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff; /* White text */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  background: #ffcc00; /* Bright yellow */
+  color: #004080;      /* Dark blue text */
+}
+
+/* Active page link */
+nav ul li a.active {
+  background: #ffcc00;
+  color: #004080;
+}
+
