@@ -63,7 +63,7 @@ footer {
 
 /* ===== Navigation Bar ===== */
 nav {
-  background: #004080; /* Dark blue background */
+  background: #2378cd; /* Dark blue background */
   padding: 15px 0;
   position: sticky; /* stays at top while scrolling */
   top: 0;
@@ -108,8 +108,8 @@ nav ul li a.active {
 .hero-header {
   text-align: center;
   padding: 100px 20px;
-  background: url("..img/logo_BF") no-repeat center center; /* logo file */
-  background-size: 120px; /* resize logo */
+  background: url("../img/logo_BF") no-repeat center center; /* logo file */
+  background-size: 200px; /* resize logo */
   background-color: #e6f2ff; /* fallback color */
   position: relative;
 }
@@ -124,7 +124,7 @@ nav ul li a.active {
 }
 /* Logo in nav */
 nav .logo {
-  height: 40px;
+  height: 60px;
   width: auto;
   margin-right: 20px;
   vertical-align: middle;
