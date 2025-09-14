@@ -191,4 +191,39 @@ nav .logo {
 .meals {
   background-image: url("../img/meals.jpg");
 }
+/* Slider container */
+.slider {
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Slides wrapper */
+.slides {
+  display: flex;
+  width: 200%; 
+  animation: slide 16s infinite;
+}
+
+.slides img {
+  width: 200%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Keyframes for auto sliding */
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(0); }
+  25%  { transform: translateX(-100%); }
+  45%  { transform: translateX(-100%); }
+  50%  { transform: translateX(-200%); }
+  70%  { transform: translateX(-200%); }
+  75%  { transform: translateX(-300%); }
+  95%  { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
 
