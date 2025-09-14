@@ -45,7 +45,7 @@ main section h2 {
   background: #0066cc;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .btn:hover {
@@ -109,9 +109,11 @@ nav ul li a.active {
   
   padding: 120px 20px;
   background: url("../img/logo_BF.png") no-repeat center center; /* logo file */
-  background-size: cover; /* cover the entire section */
+  background-size: contain; /* fit within the header */
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #e6f2ff; /* fallback color */
-  position: relative;
+  min-height: 300px; /* header height */
 }
 
 .hero-header h1 {
