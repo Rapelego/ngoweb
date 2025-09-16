@@ -58,6 +58,34 @@
           >
         </p>
       </section>
+       <!-- Volunteer Signup Form -->
+    <section id="volunteer-form">
+      <h2>Sign Up to Volunteer</h2>
+      <form action="mailto:info@brightfutures.org" method="post" enctype="text/plain">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+27 ..." required>
+
+        <label for="interest">Area of Interest:</label>
+        <select id="interest" name="interest" required>
+          <option value="">-- Please choose --</option>
+          <option value="tutoring">Tutoring</option>
+          <option value="sports">Sports Coaching</option>
+          <option value="meals">Meal Assistance</option>
+          <option value="fundraising">Fundraising & Events</option>
+        </select>
+
+        <label for="message">Tell us why you'd like to volunteer:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
     </main>
 
     <!-- Footer -->
