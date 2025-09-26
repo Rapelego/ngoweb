@@ -23,6 +23,5 @@ Part 2 focused on implementing **CSS styling and responsive design** to improve 
 
 ---
 
-## 📂 Project Structure  
 
 
