@@ -1,11 +1,12 @@
-/* Reset some default margins/paddings */
+/* ==========================
+   RESET & BASE
+   ========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styling */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -13,7 +14,9 @@ body {
   color: #333;
 }
 
-/* Header */
+/* ==========================
+   HEADER
+   ========================== */
 header {
   text-align: center;
   padding: 40px 20px;
@@ -25,7 +28,74 @@ header h1 {
   color: #004080;
 }
 
-/* Sections */
+/* Hero Header with background logo */
+.hero-header {
+  padding: 120px 20px;
+  min-height: 300px;
+  background: url("../img/logo_BF.png") no-repeat center center / contain,
+              #e6f2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-header h1 {
+  font-size: 2.5em;
+  color: #004080;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* ==========================
+   NAVIGATION
+   ========================== */
+nav {
+  background: #2378cd;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #004080;
+}
+
+nav ul li a.active {
+  background: #ffcc00;
+  color: #004080;
+}
+
+/* Logo in nav */
+nav .logo {
+  height: 40px;
+  width: auto;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+
+/* ==========================
+   SECTIONS
+   ========================== */
 main section {
   padding: 40px 20px;
   text-align: center;
@@ -37,101 +107,7 @@ main section h2 {
   color: #0066cc;
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 15px;
-}
-
-.btn:hover {
-  background: #004080;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #0066cc;
-  color: white;
-  margin-top: 20px;
-}
-
-/* ===== Navigation Bar ===== */
-nav {
-  background: #2378cd; /* Dark blue background */
-  padding: 15px 0;
-  position: sticky; /* stays at top while scrolling */
-  top: 0;
-  z-index: 1000;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 30px; /* spacing between links */
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  color: #fff; /* White text */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect */
-nav ul li a:hover {
-  background: #ffcc00; /* Bright yellow */
-  color: #004080; /* Dark blue text */
-}
-
-/* Active page link */
-nav ul li a.active {
-  background: #ffcc00;
-  color: #004080;
-}
-/* Hero Header with background logo */
-.hero-header {
-  
-  padding: 120px 20px;
-  background: url("../img/logo_BF.png") no-repeat center center; /* logo file */
-  background-size: contain; /* fit within the header */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #e6f2ff; /* fallback color */
-  min-height: 300px; /* header height */
-}
-
-.hero-header h1 {
-  font-size: 2.5em;
-  color: #004080;
-  background: rgba(255, 255, 255, 0.7); /* semi-transparent overlay to improve readability */
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 8px;
-}
-/* Logo in nav */
-nav .logo {
-  height: 40px;
-  width: auto;
-  margin-right: 20px;
-  vertical-align: middle;
-}
-/* Offer grid layout */
+/* Offer grid */
 .offer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -139,7 +115,6 @@ nav .logo {
   margin-top: 20px;
 }
 
-/* Offer box styles */
 .offer-box {
   position: relative;
   padding: 20px;
@@ -155,59 +130,35 @@ nav .logo {
   overflow: hidden;
 }
 
-/* Dark overlay for readability */
 .offer-box::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 64, 128, 0.6); /* semi-transparent overlay */
+  inset: 0;
+  background: rgba(0, 64, 128, 0.6);
   border-radius: 10px;
   z-index: 1;
 }
 
-/* Text should appear above overlay */
 .offer-box h3,
 .offer-box p {
   position: relative;
   z-index: 2;
 }
 
-/* Specific background images */
-.homework {
-  background-image: url("../img/homework.jpg"); 
-}
+/* Background images */
+.homework { background-image: url("../img/homework.jpg"); }
+.reading  { background-image: url("../img/reading.jpg"); }
+.sports   { background-image: url("../img/sports.jpg"); }
+.meals    { background-image: url("../img/meals.jpg"); }
 
-.reading {
-  background-image: url("../img/Reading.jpg");
-}
-
-.sports {
-  background-image: url("../img/sports.jpg");
-}
-
-.meals {
-  background-image: url("../img/meals.jpg");
-}
-/* image container */
-.image {
-  width: 10px;
-  max-width: 100px;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  display: none;
-}
-
-/* ===== Contact Form Styling ===== */
+/* ==========================
+   CONTACT & VOLUNTEER FORMS
+   ========================== */
 form {
   max-width: 600px;
   margin: 30px auto;
   padding: 25px;
-  background: #e6f2ff; /* light blue background */
+  background: #e6f2ff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: left;
@@ -228,7 +179,6 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  font-family: inherit;
   resize: vertical;
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
@@ -255,4 +205,59 @@ form button:hover {
   background: #004080;
 }
 
+/* ==========================
+   BUTTONS
+   ========================== */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+}
 
+.btn:hover {
+  background: #004080;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0066cc;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+   ========================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  nav ul { gap: 20px; }
+  .hero-header { padding: 80px 15px; }
+  .hero-header h1 { font-size: 2em; }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-header {
+    padding: 60px 10px;
+    background-size: 150px;
+  }
+  .hero-header h1 {
+    font-size: 1.5em;
+    padding: 8px 15px;
+  }
+  form { width: 90%; }
+  .offer-grid { grid-template-columns: 1fr; }
+}
