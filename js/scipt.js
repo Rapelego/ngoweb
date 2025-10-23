@@ -39,21 +39,21 @@ function validateForm(formId) {
 
     if (!name.value.trim()) {
       valid = false;
-      errorMessage += "⚠️ Please enter your name.\n";
+      errorMessage += " Please enter your name.\n";
     }
     if (!email.value.includes('@')) {
       valid = false;
-      errorMessage += "⚠️ Please enter a valid email address.\n";
+      errorMessage += " Please enter a valid email address.\n";
     }
     if (message && message.value.trim().length < 5) {
       valid = false;
-      errorMessage += "⚠️ Please enter a longer message.\n";
+      errorMessage += " Please enter a longer message.\n";
     }
 
     if (!valid) {
       alert(errorMessage);
     } else {
-      alert("✅ Thank you! Your message has been submitted successfully.");
+      alert(" Thank you! Your message has been submitted successfully.");
       form.reset();
     }
   });
