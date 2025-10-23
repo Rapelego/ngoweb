@@ -62,3 +62,20 @@ function validateForm(formId) {
 // Apply validation to both forms
 validateForm("contactForm");
 validateForm("volunteerForm");
+
+// ===== 4. Fade-In Animation for Sections =====
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeSections = document.querySelectorAll(".fade-section");
+
+  fadeSections.forEach((section, index) => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(30px)";
+    section.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+
+    // Delay each section’s animation slightly for a nice staggered effect
+    setTimeout(() => {
+      section.style.opacity = "1";
+      section.style.transform = "translateY(0)";
+    }, 300 * (index + 1));
+  });
+});
