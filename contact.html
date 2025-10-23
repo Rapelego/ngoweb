@@ -8,14 +8,15 @@
   </head>
 
   <body>
-    <!--Navigation-->
+    <!-- ===== Navigation ===== -->
     <nav>
-       <!-- Hamburger for mobile -->
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <!-- Hamburger for mobile -->
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul>
         <li>
           <img src="img/logo_BF.png" alt="Bright Futures Logo" class="logo" />
@@ -28,10 +29,12 @@
       </ul>
     </nav>
 
+    <!-- ===== Header ===== -->
     <header>
       <h1>Contact Us</h1>
     </header>
-    <!-- Main Content -->
+
+    <!-- ===== Main Content ===== -->
     <main>
       <section id="contact">
         <p>
@@ -48,31 +51,29 @@
         </p>
 
         <h2>Send Us a Message</h2>
-        <form
-          action="mailto:info@brightfutures.org"
-          method="post"
-          enctype="text/plain"
-        >
-          <label for="name">Your Name:</label><br />
-          <input type="text" id="name" name="name" required /><br /><br />
 
-          <label for="email">Your Email:</label><br />
-          <input type="email" id="email" name="email" required /><br /><br />
+        <!-- Contact Form -->
+        <form id="contactForm" method="post" action="mailto:info@brightfutures.org" enctype="text/plain">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" required />
 
-          <label for="message">Message:</label><br />
-          <textarea id="message" name="message" rows="5" required></textarea
-          ><br /><br />
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" required />
 
-          <button type="submit">Send Message</button>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
         </form>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ===== Footer ===== -->
     <footer>
       <p>&copy; 2025 Bright Futures Aftercare | Website by Maditsi Rapelego</p>
     </footer>
-    <!-- ===== JavaScript File Linked Here ===== -->
+
+    <!-- ===== JavaScript Linked Here ===== -->
     <script src="js/script.js"></script>
   </body>
 </html>
