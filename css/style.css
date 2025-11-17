@@ -85,6 +85,38 @@ nav ul li a.active {
   color: #004080;
 }
 
+/* Search Bar Styling */
+.search-container {
+  margin-left: 20px;
+}
+
+#searchInput {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchInput:focus {
+  border: 1px solid #ffcc00;
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.7);
+}
+
+/* Responsive Search Bar on Mobile */
+@media (max-width: 768px) {
+  .search-container {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+}
+
+
 /* Logo in nav */
 nav .logo {
   height: 40px;

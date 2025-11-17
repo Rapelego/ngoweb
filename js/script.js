@@ -117,3 +117,25 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+/* =========================================
+   5. Page Search Function
+========================================= */
+const searchInput = document.getElementById("searchInput");
+
+if (searchInput) {
+  searchInput.addEventListener("keyup", function () {
+    const term = this.value.toLowerCase();
+    const content = document.querySelectorAll("main, section, p, li, h1, h2, h3");
+
+    content.forEach((element) => {
+      const text = element.textContent.toLowerCase();
+
+      if (text.includes(term)) {
+        element.style.backgroundColor = "yellow";
+      } else {
+        element.style.backgroundColor = "transparent";
+      }
+    });
+  });
+}
