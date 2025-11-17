@@ -115,6 +115,43 @@ nav ul li a.active {
     width: 100%;
   }
 }
+/* ==== Search Dropdown Results ==== */
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 2000;
+}
+
+.search-results div {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.search-results div:hover {
+  background: #ffcc00;
+  color: #004080;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .search-results {
+    width: 100%;
+  }
+}
+
 
 
 /* Logo in nav */

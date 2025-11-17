@@ -122,20 +122,62 @@ document.addEventListener("DOMContentLoaded", () => {
    5. Page Search Function
 ========================================= */
 const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
 
 if (searchInput) {
   searchInput.addEventListener("keyup", function () {
     const term = this.value.toLowerCase();
-    const content = document.querySelectorAll("main, section, p, li, h1, h2, h3");
+    const sections = document.querySelectorAll("h1, h2, h3, p, li");
 
-    content.forEach((element) => {
-      const text = element.textContent.toLowerCase();
+    searchResults.innerHTML = "";
+    searchResults.style.display = "none";
+
+    if (term.length < 2) return; // Only search after 2 characters
+
+    let matches = [];
+
+    sections.forEach((el) => {
+      const text = el.textContent.toLowerCase();
 
       if (text.includes(term)) {
-        element.style.backgroundColor = "yellow";
-      } else {
-        element.style.backgroundColor = "transparent";
+        matches.push({
+          text: el.textContent,
+          element: el
+        });
       }
     });
+
+    if (matches.length > 0) {
+      searchResults.style.display = "block";
+
+      matches.slice(0, 8).forEach((match) => {
+        const div = document.createElement("div");
+        div.textContent = match.text;
+
+        // When clicked → scroll & highlight
+        div.addEventListener("click", () => {
+          match.element.scrollIntoView({ behavior: "smooth", block: "center" });
+
+          // Flash highlight
+          match.element.style.backgroundColor = "yellow";
+          setTimeout(() => {
+            match.element.style.backgroundColor = "transparent";
+          }, 1500);
+
+          searchResults.style.display = "none";
+          searchInput.value = "";
+        });
+
+        searchResults.appendChild(div);
+      });
+    }
+  });
+
+  // Hide dropdown on click outside
+  document.addEventListener("click", (event) => {
+    if (!searchInput.contains(event.target) &&
+        !searchResults.contains(event.target)) {
+      searchResults.style.display = "none";
+    }
   });
 }
