@@ -320,6 +320,53 @@ form button:hover {
 .slide.active {
   opacity: 1;
 }
+/* Interactive slider controls */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Dots */
+.dots-container {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  z-index: 5;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: #0066cc;
+}
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

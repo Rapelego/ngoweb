@@ -12,43 +12,70 @@ if (menuToggle) {
 }
 
 /* =========================================
-   2. Responsive Image Slider (Fade + Auto + Hover Pause)
+   2. INTERACTIVE SLIDER
 ========================================= */
-let slideIndex = 0;
-let slideInterval;
+let currentSlide = 0;
+let autoSlide;
 
-function showSlides() {
+function showSlide(index) {
   const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+
   if (slides.length === 0) return;
 
-  // Hide all slides
-  slides.forEach((slide) => slide.classList.remove("active"));
+  if (index >= slides.length) currentSlide = 0;
+  if (index < 0) currentSlide = slides.length - 1;
 
-  // Move to next
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
+  slides.forEach(s => s.style.opacity = "0");
+  dots.forEach(d => d.classList.remove("active"));
 
-  // Show current
-  slides[slideIndex - 1].classList.add("active");
+  slides[currentSlide].style.opacity = "1";
+  dots[currentSlide].classList.add("active");
 }
 
-// Start slider on load
+function nextSlide() {
+  currentSlide++;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide--;
+  showSlide(currentSlide);
+}
+
+function startAutoSlide() {
+  autoSlide = setInterval(nextSlide, 4000);
+}
+
+// Event listeners
 document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide");
-  if (slides.length === 0) return;
+  showSlide(currentSlide);
+  startAutoSlide();
 
-  slides[0].classList.add("active"); // show first image
-  slideInterval = setInterval(showSlides, 4000);
+  document.querySelector(".next").addEventListener("click", () => {
+    nextSlide();
+    restartAuto();
+  });
 
-  // Pause on hover
-  const slider = document.querySelector(".slider");
-  if (slider) {
-    slider.addEventListener("mouseenter", () => clearInterval(slideInterval));
-    slider.addEventListener("mouseleave", () => {
-      slideInterval = setInterval(showSlides, 4000);
+  document.querySelector(".prev").addEventListener("click", () => {
+    prevSlide();
+    restartAuto();
+  });
+
+  document.querySelectorAll(".dot").forEach(dot => {
+    dot.addEventListener("click", () => {
+      currentSlide = Number(dot.dataset.slide) - 1;
+      showSlide(currentSlide);
+      restartAuto();
     });
-  }
+  });
 });
+
+// Restart timer when user interacts
+function restartAuto() {
+  clearInterval(autoSlide);
+  startAutoSlide();
+}
 
 /* =========================================
    3. Form Validation (Contact & Volunteer)
