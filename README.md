@@ -222,4 +222,45 @@ contact.html	Map embed + SEO tags
 All Part 3 requirements were completed successfully, including JavaScript interactivity, responsive improvements, SEO enhancement, accessibility upgrades, and bug fixes.
 The website is now more dynamic, professional, mobile-friendly, and search-engine optimized.
 
+Reference List
+Google Maps
 
+Google. (2025) Google Maps. Available at: https://maps.google.com
+ (Accessed: 18 November 2025).
+
+Unsplash – Stock Images
+
+(Use these only if you downloaded the suggested images)
+
+Sports / Children Activities
+Unsplash. (2025) Children playing sports outdoors. Available at: https://unsplash.com
+ (Accessed: 18 November 2025).
+
+Homework / Learning
+Unsplash. (2025) Child doing homework at a table. Available at: https://unsplash.com
+ (Accessed: 18 November 2025).
+
+Reading Circles
+Unsplash. (2025) Children reading books together. Available at: https://unsplash.com
+ (Accessed: 18 November 2025).
+
+Meals / Nutrition
+Unsplash. (2025) Healthy meals served for children. Available at: https://unsplash.com
+ (Accessed: 18 November 2025).
+
+Career Guidance
+Unsplash. (2025) Career growth and learning concept photo. Available at: https://unsplash.com
+ (Accessed: 18 November 2025).
+
+(If you want, I can replace these with the EXACT URLs of the images once you choose which ones to download.)
+
+General SEO Guidelines
+
+Google Developers. (2025) Search Engine Optimization (SEO) Starter Guide. Available at: https://developers.google.com/search
+ (Accessed: 18 November 2025).
+
+W3C. (2024) Web Content Accessibility Guidelines (WCAG) 2.2. Available at: https://www.w3.org/WAI/
+ (Accessed: 18 November 2025).
+
+MDN Web Docs. (2024) Using the alt attribute. Available at: https://developer.mozilla.org
+ (Accessed: 18 November 2025).
